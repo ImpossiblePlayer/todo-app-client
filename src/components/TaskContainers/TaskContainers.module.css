@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+:root {
+	--bg-color: #222949;
+	--block-color: #583297;
+	--accent-color: #6e4899;
+	--text-color: #eeeeee;
+	/* --accent-text-color: #000000; */
+	--shadow-color: #262b44;
+	/* --border-color: #2b2b2b; */
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+html,
+body {
+	background-color: var(--bg-color);
+	font: 450 20px 'Nunito', sans-serif;
+	color: var(--text-color);
+}
+
+/* header {
+	position: sticky;
+	height: 2.5rem;
+	display: flex;
+	justify-content: center;
+	background-color: #2e2e2e;
+} */
+
+main {
+	padding-top: 2rem;
+	display: grid;
+	grid-template-columns: auto auto auto;
+	justify-content: space-evenly;
+}
+
+.taskContainer {
+	width: 20rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.taskTitle {
+	width: 20rem;
+	margin: 0.6rem 0;
+	display: block;
+	font-size: 1.2rem;
+	font-weight: 550;
+	color: var(--accent-text-color);
+}
+
+.taskTitle span:first-child {
+	margin-right: 2rem;
+}
+
+.taskTitle::after {
+	/* position: relative;
+	top: 10px; */
+	content: '';
+	width: 20rem;
+	height: 0.25rem;
+	display: block;
+	background-color: #4aff39;
+	box-shadow: 0 0 10px 1px #4aff39;
+	border-radius: 2px;
+}
+
+.taskContainer:first-of-type > .taskTitle::after {
+	background-color: #ff9100;
+	box-shadow: 0 0 10px 1px #ff9100;
+}
+.taskContainer:last-of-type > .taskTitle::after {
+	background-color: #ff3939;
+	box-shadow: 0 0 10px 1px #ff3939;
+}
+
+.taskList {
+	display: flex;
+	flex-direction: column;
+}
+
+.task {
+	width: 20rem;
+	min-height: 5rem;
+	max-height: 12rem;
+	margin: 0.2rem 0;
+	padding: 0.6rem 0.8rem;
+	overflow: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	background-color: var(--block-color);
+	box-shadow: 0 3px 10px 2px var(--shadow-color);
+	border: var(--border-color) solid 1px;
+	border-radius: 0.25rem;
+}
+
+#newTaskInput {
+	resize: none;
+	min-height: 3.5rem;
+	max-height: 14rem;
+	overflow: auto;
+	/* margin-bottom: 0.4rem; */
+	padding: 0.5rem;
+	font: 0.8rem 'Plus Jakarta Sans', sans-serif;
+	color: var(--text-color);
+	background-color: var(--accent-color);
+	border: var(--border-color) solid 1px;
+	border-radius: 0.25rem;
+}
+
+.taskFooter {
+	margin-top: 0.4rem;
+	padding-top: 0.5rem;
+	height: 1.8rem;
+	display: flex;
+	justify-content: space-between;
+	border-top: 1px solid var(--border-color);
+}
+
+.taskDate {
+	font-size: 0.8rem;
+}
+
+.taskDate input {
+	width: 7rem;
+	font-size: 0.8rem;
+	border-radius: 0.15rem;
+}
+
+.taskBtns {
+	height: 1.5rem;
+	display: flex;
+	align-self: flex-end;
+}
+
+.taskBtns button {
+	margin-left: 0.2rem;
+	background: transparent;
+}
+
+.taskBtns button:hover {
+	cursor: pointer;
+}
