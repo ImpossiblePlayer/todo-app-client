@@ -1,3 +1,7 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/8ff2ce92-74af-4283-9349-b49faa90ba76/deploy-status)](https://app.netlify.com/sites/react-todo-app-582/deploys)
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#
+
 # Getting Started with Create React App
 
 Этот проект был создан с использованием [Create React App](https://github.com/facebook/create-react-app).
