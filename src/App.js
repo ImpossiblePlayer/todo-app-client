@@ -20,7 +20,6 @@ const App = () => {
 		getLatestTasks: () => {
 			fetch('/api/gettasks/', {
 				headers: {
-					origin: 'http://localhost:5000',
 					'Content-Type': 'application/json',
 				},
 			})
@@ -50,14 +49,13 @@ const App = () => {
 
 		// функция для создания нового задания
 		setTask: () => {
-			fetch('/api/create/', {
+			fetch('/api/createtask/', {
 				method: 'POST',
 				body: JSON.stringify({
 					content: newInput,
 					date: newDate,
 				}),
 				headers: {
-					origin: 'http://localhost:5000',
 					'Content-type': 'application/json; charset=UTF-8',
 				},
 			})
@@ -71,14 +69,13 @@ const App = () => {
 
 		// функция для удаления задания
 		deleteTask: (id, taskList) => {
-			fetch(`/api/delete/${taskList}/${id}/`, {
+			fetch(`/api/deletetask/`, {
 				method: 'POST',
 				body: JSON.stringify({
 					taskList: taskList,
 					id: id,
 				}),
 				headers: {
-					origin: 'http://localhost:5000',
 					'Content-type': 'application/json; charset=UTF-8',
 				},
 			})
@@ -94,7 +91,6 @@ const App = () => {
 					id: id,
 				}),
 				headers: {
-					origin: 'http://localhost:5000',
 					'Content-type': 'application/json; charset=UTF-8',
 				},
 			})
@@ -108,7 +104,9 @@ const App = () => {
 	};
 
 	// получаем задания с сервера
-	useEffect(() => funcs.getLatestTasks(), []);
+	useEffect(() => {
+		funcs.getLatestTasks();
+	}, []);
 
 	return (
 		<main>
